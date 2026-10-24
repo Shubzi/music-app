@@ -17,20 +17,23 @@ const Navbar = () => {
     };
 
     return (
-        <header className="flex items-center justify-between border-b border-zinc-800 px-8 py-5">
-            <form onSubmit={handleSearch} className="flex items-center gap-4">
+        <header className="flex items-center gap-3 border-b border-zinc-800 px-4 py-4 sm:px-6 md:justify-between md:px-8 md:py-5">
+            <form
+                onSubmit={handleSearch}
+                className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3 md:flex-none"
+            >
                 <input
                     type="search"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    placeholder="Search for songs, artists, or albums..."
+                    placeholder="Search songs, artists, or albums..."
                     aria-label="Search songs, artists, or albums"
-                    className="w-80 rounded-full bg-zinc-900 px-5 py-3 text-sm outline-none placeholder:text-zinc-500 focus:ring-2 focus:ring-green-500"
+                    className="min-w-0 flex-1 rounded-full bg-zinc-900 px-4 py-3 text-sm outline-none placeholder:text-zinc-500 focus:ring-2 focus:ring-green-500 md:w-80 md:flex-none"
                 />
 
                 <button
                     type="submit"
-                    className="rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-black transition hover:bg-green-400"
+                    className="shrink-0 rounded-full bg-green-500 px-4 py-3 text-sm font-semibold text-black transition hover:bg-green-400 sm:px-5"
                 >
                     Search
                 </button>
@@ -38,7 +41,7 @@ const Navbar = () => {
 
             <button
                 type="button"
-                className="rounded-full bg-zinc-900 px-4 py-3 text-sm hover:bg-zinc-800"
+                className="shrink-0 rounded-full bg-zinc-900 px-3 py-3 text-sm transition hover:bg-zinc-800 sm:px-4"
             >
                 Profile
             </button>
